@@ -2,11 +2,11 @@
 
 This circuit uses the ADC input of the ATtiny85 and a PWM output to control a boost converter circuit.
 
-The code sets up the ATtiny to output a ~32 kHz PWM signal on pin PB1, and read the ADC on pin PB3. Pins PB0 and PB2 are set up as SDA and SCL of the I<sup>2</sup>C bus, respectively.
+The code sets up the ATtiny to output a ~32 kHz PWM signal on pin PB1, and read the ADC on pin PB3. Pins PB0 and PB2 are set up as SDA and SCL of the I2C bus, respectively.
 
-Based partly on [this video](https://youtube.com/watch?v=QnUhjnbZ0T8) from GreatScott. The code he provided was quite long and verbose, and included a potentiometer to control the voltage, but this is designed to be controlled over I<sup>2</sup>C.
+Based partly on [this video](https://youtube.com/watch?v=QnUhjnbZ0T8) from GreatScott. The code he provided was quite long and verbose, and included a potentiometer to control the voltage, but this is designed to be controlled over I2C.
 
-## I<sup>2</sup>C Register Summary
+## I2C Register Summary
 
 | Register Index | R/W | Default | Function |
 |:--------------:|:---:|:-------:|:---------|
@@ -19,7 +19,7 @@ Based partly on [this video](https://youtube.com/watch?v=QnUhjnbZ0T8) from Great
 
 * ATtiny85
 * Power inductor (~200 &micro;H, thick wire for 3+ amps)
-* N-channel power MOSFET (I used IRLZ44N)
+* N-channel power MOSFET (I used an IRLZ44N)
 * Large capacitor (I used 1000&micro;F)
 * Schottky diode (3+ amps - I used an SB360)
 * Feedback resistor pair (I used 100k/10k for an 11x division of the output voltage)
