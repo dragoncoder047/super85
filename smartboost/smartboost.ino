@@ -1,6 +1,6 @@
 #define I2C_SLAVE_ADDRESS 0x05 // the 7-bit address
 #include <Wire.h>
-volatile uint8_t i2c_regs[]={ 55, 220, 128, 0 };
+volatile uint8_t i2c_regs[] = { 55, 220, 128, 0 };
 #define ADC_TARGET i2c_regs[0]
 #define MAX_PWM i2c_regs[1]
 #define CURRENT_PWM i2c_regs[2]
@@ -17,7 +17,6 @@ void requestEvent() {
 }
 void receiveEvent(uint8_t howMany) {
     if (howMany < 1) return;
-    //if (howMany > TWI_RX_BUFFER_SIZE) return;
     reg_position = Wire.read();
     howMany--;
     if (!howMany) return;
@@ -31,9 +30,9 @@ void receiveEvent(uint8_t howMany) {
 void setup() {
     cli();
     // set pin modes
-    DDRB = 1<<PB1 | 1<<PB4;
+    DDRB = 1<<PB1;
 
-    TCCR1 = 1<<CS00 | 1<<PWM1A | 2<<COM1A0; // turn off clock divisor, select PB1 as OC1A output
+    TCCR1 = 1<<CS10 | 1<<PWM1A | 2<<COM1A0; // turn off clock divisor, select PB1 as OC1A output
 
     Wire.begin(I2C_SLAVE_ADDRESS);
     Wire.onReceive(receiveEvent);
