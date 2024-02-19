@@ -13,11 +13,10 @@ PB4/ADC2/OC1B  ---|             |--- PB1/OC0B/OC1A
 
 This is a collection of short Arduino sketches I have written for the ATtiny85 microcontroller.
 
-Currently there is only one of them, a smart software-configurable boost converter, but I plan on releasing more useful ATtiny85 sketches in the future. Check out the gitignore for ones that are in the works but not ready for release yet.
-
 ## Included sketches
 
-* [SmartBoost](smartboost/readme.md): software-configurable boost converter power supply
+* [smartboost](smartboost/readme.md): software-configurable boost converter power supply
+* [clocksync](clocksync/readme.md): synchronize DC motor to mains frequency to run electric clock
 
 ## Notes
 
@@ -39,7 +38,7 @@ Currently there is only one of them, a smart software-configurable boost convert
         Wire.endTransmission(false);
         Wire.requestFrom(XXX, NNN);
         ```
-* The built-in I2C slave functionality is only present in Spence Konde's [ATTinyCore], please use that.
+* The built-in I2C slave functionality is only present in Spence Konde's [ATTinyCore], please use that when compiling these sketches.
 
 [ATtinyCore]: https://github.com/SpenceKonde/ATTinyCore
 [prog]: https://www.sparkfun.com/products/11801
