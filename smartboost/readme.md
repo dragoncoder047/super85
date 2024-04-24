@@ -4,7 +4,7 @@ This circuit uses the ADC input of the ATtiny85 and a PWM output to control a bo
 
 The code sets up the ATtiny to output a ~32 kHz PWM signal on pin PB1, and read the ADC on pin PB3. Pins PB0 and PB2 are set up as SDA and SCL of the I2C bus, respectively.
 
-Based partly on [this video](https://youtube.com/watch?v=QnUhjnbZ0T8) from GreatScott. The code he provided was quite long and verbose, and included a potentiometer to control the voltage, but this is designed to be controlled over I2C.
+I made a [YouTube video](https://youtube.com/watch?v=NnDvN9RbQGY&si=ahxCAqWVCsQAkOef) about this that explains a bit about how the circuit itself works and why I built it.
 
 ## I2C Register Summary
 
