@@ -25,7 +25,7 @@ int error = 0;
 #define SLOWDOWN_BY 128
 
 #define MIN_PWM 0
-#define MAX_PWM 10
+#define MAX_PWM 255
 
 
 void do_pid() {
